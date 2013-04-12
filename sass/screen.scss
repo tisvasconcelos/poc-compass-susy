@@ -1,0 +1,56 @@
+
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+body{
+	margin: 0;
+}
+
+.container {
+	@include container($total-columns, $mobile, $tablet, $computer);
+	/*@include susy-grid-background;*/
+
+	.content{
+		@include span-columns($total-columns);
+		@include post(0);
+
+		nav{
+			@include span-columns(5.5);
+			@include post(.5);
+
+				li{
+					margin: 0 0 4px;
+				}
+		}
+
+		@include at-breakpoint($mobile) {
+			nav{
+				@include span-columns(12);
+				@include post(0);
+				margin-bottom: 10px;
+
+				li{
+					margin: 0 0 8px;
+				}
+			}
+		}
+
+		@include at-breakpoint($tablet) {
+			nav{
+				li{
+					margin: 0 0 8px;
+				}
+			}
+		}
+
+		article{
+			@include span-columns(18);
+			@include post(0);
+		}
+	}
+}

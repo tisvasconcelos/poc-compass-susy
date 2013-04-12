@@ -1,0 +1,25 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "susy";
+
+// ---------------------------------------------------------------------------
+// Basic Grid
+
+$total-columns  : 24;
+$column-width   : 20px;
+$gutter-width   : 20px;
+$grid-padding   : $gutter-width;
+
+$base-font-size: 16px;
+
+$show-grid-backgrounds: true;
+
+$legacy-support-for-ie  : true;
+$legacy-support-for-ie6 : $legacy-support-for-ie;
+$legacy-support-for-ie7 : $legacy-support-for-ie;
+
+//alternative layout breakpoints
+$mobile: 12 480px;
+$tablet: 18 767px;
+$computer: 768px 979px 24;
